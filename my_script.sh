@@ -75,7 +75,8 @@ case "$1" in
         display_help
         ;;
     --init)
-        git clone . <klonowanie całego repozytorium do bieżącego katalogu>
+        
+        git clone .
         export PATH=$PATH:$(pwd)
         ;;
     *)
@@ -83,4 +84,3 @@ case "$1" in
         exit 1
         ;;
 esac
-
