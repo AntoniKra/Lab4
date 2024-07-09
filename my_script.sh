@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Function to display help message
+
 function display_help {
     echo "Usage: ./my_script.sh [--date | --logs [N] | --help]"
     echo "--date          Display today's date"
@@ -9,9 +9,9 @@ function display_help {
     echo "--help          Display this help message"
 }
 
-# Function to create log files
+
 function create_logs {
-    local num_logs=${1:-100}  # Default to 100 logs if no argument is provided
+    local num_logs=${1:-100}  
     for (( i=1; i<=$num_logs; i++ ))
     do
         filename="log${i}.txt"
@@ -21,7 +21,7 @@ function create_logs {
     done
 }
 
-# Main script logic
+
 if [[ $# -eq 0 ]]; then
     display_help
     exit 1
